@@ -6,7 +6,7 @@ defaults:
     values:
       layout: default
 
-title: Christian Ezeani
+title: 安之若素
 subtitle: Full-Stack Developer
 
 # Side Menu Links
@@ -34,7 +34,7 @@ social_icons:
     icon: fab fa-linkedin
 
   - name: github
-    link: https://github.com/christianezeani
+    link: https://github.com/lwcsjzz
     icon: fab fa-github-square
 
   - name: facebook
