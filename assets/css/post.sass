@@ -1,0 +1,99 @@
+---
+---
+@mixin transition($args...)
+  -webkit-transition: $args
+  -moz-transition: $args
+  -ms-transition: $args
+  -o-transition: $args
+  transition: $args
+
+main
+  div
+    .divider
+      margin: 10px 0
+
+    &.highlighter-rouge
+      margin: 1em 20px
+
+      pre
+        padding: 5px
+
+  figure
+    &.highlight
+      margin: 1em 20px
+
+      pre
+        white-space: pre-wrap
+
+      table
+        width: auto
+
+#post-info
+  h3
+    font-weight: bold
+    margin-bottom: 15px
+
+  ul
+    &:not(.browser-default)
+      padding-left: 0
+      width: 40%
+
+      li
+        list-style-type: none
+
+  span
+    font-size: 14px
+    display: block
+    margin-bottom: 5px
+
+    i
+      font-size: 11.5px
+      margin-right: 10px
+
+      &#indicate
+        font-size: 20px
+
+    .chip
+      color: #616161
+      margin-right: 5px
+
+      &:hover
+        color: #fff
+        background-color: #616161
+
+      @include transition(all .3s ease-in-out)
+
+@media only screen and (max-width: 992px)
+  #post-info
+    h3
+      text-align: center
+
+    ul
+      &:not(.browser-default)
+        width: 100%
+
+/* 标题颜色 */
+.post-title-color
+  color: #00A67C
+
+/* 文章顶部图片 */
+.post-img
+  width: 100%
+  height: 0
+  padding-bottom: 56.25%
+  position: relative
+
+/* i标签 */
+.post-views-icon
+  font-size: 18px
+  margin-right: 2px
+  vertical-align: middle
+
+/* 不算子字眼 */
+.post-views-span
+  font-size: 15px
+  line-hight: 15px
+  margin-right: 20px
+  font-style:normal
+  vertical-align: middle
+  color: #999999

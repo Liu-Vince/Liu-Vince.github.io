@@ -1,49 +1,62 @@
-defaults:
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: default
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
 title: 安之若素
-subtitle: Full-Stack Developer
+subtitle: 安之若素的个人博客
+description: >- #
+  小刘的个人博客: 分享自己总结的Python爬虫，Web开发，数据分析的心得。
+  此外还输出自己的思考内容，涉猎产品知识、个人成长等，每周给你带来头脑大爆炸。
+baseurl: ""
+url: "https://lwcsjzz.github.io"
+repository: lwcsjzz
+# 文章链接格式, 伪 /%post_id.html%/
+permalink: /:short_year:i_month:i_day.html
+# permalink: /:year/:month/:day/:title
+# 分页, 每页显示文章数
+paginate: 15
+paginate_path: /page:num
+# 设置时区, 默认本地操作系统时间
+timezone: Asia/Shanghai
 
-# Side Menu Links
-menu:
-  - text: Portfolio
-    link: /
-    icon: ""
+# 个人信息配置
+github_profile: "https://github.com/lwcsjzz"
+user: "lwcsjzz"
+user_email: "liuwenchang.x@qq.com"
+#contact_url: "https://goo.gl/tVljbV"
 
-  - text: Skills & Offers
-    link: /skills-and-offers
-    icon: ""
+# 统计
+# Analytics settings
+# google_tracking_id: ""
+# google_site_verification: ""
 
-  - text: Contact Me
-    link: /contact
-    icon: ""
+# 评论系统
+#disqus_shortname: ""
 
-  - text: My Resume
-    link: /resume
-    icon: ""
+# Gems
+plugins: [jekyll-paginate]
 
-# Socialmedia Icons
-social_icons:
-  - name: linkedin
-    link: https://www.linkedin.com/christianezeani
-    icon: fab fa-linkedin
-
-  - name: github
-    link: https://github.com/lwcsjzz
-    icon: fab fa-github-square
-
-  - name: facebook
-    link: https://www.facebook.com/christian.ezeani.cyb
-    icon: fab fa-facebook-square
-
-  - name: twitter
-    link: https://www.twitter.com/christianezeani
-    icon: fab fa-twitter
-
-
-    
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+exclude:
+  - Gemfile
+  - Gemfile.lock
+sass:
+  style: compressed
+future: true
